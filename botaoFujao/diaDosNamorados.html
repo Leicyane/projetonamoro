@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia Dos Namorados</title>
+
+
+    <style>
+        body{
+           background-color: red; 
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border: radius 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-left: -60px;
+
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-left: 10px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Feliz Dia dos Namorados</h1>
+        <h5>Aceita namorar comigo?</h5>
+
+
+       <a href="https://www.youtube.com/watch?v=oRvND-r57Us"><button id="sim">Sim!</button></a>
+        <button onmouseover="fuja()"id ="nao"> Não!</button>
+
+        <img src="https://media.tenor.com/fVSU8tk4GFAAAAAC/i-love-you-love.gif" alt="">
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela- botaoNao.offsetWidth;
+            var maxY = larguraJanela- botaoNao.offsetHeight;
+
+            var aleatorioX= Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random ()* maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+    
+</body>
+</html>
